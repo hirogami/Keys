@@ -1,0 +1,687 @@
+---
+title: "Usuful_Keys_Shortcuts_Commands"
+author: "misho"
+date: "2023-10-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Contents
+
+I. [Alacritty](#alacritty)
+
+II. [Linux/Unix commands](#linux)
+
+III. [Fish](#fish)
+
+IV. [Vim key bindings](#vim)
+
+V. [Neovim](#neovim)
+
+VI. [Ranger](#ranger)
+
+VII. [RStudio](#rstudio)
+
+VIII. [Brave Browser & Vimium](#brave)
+
+<a name="alacritty"></a>
+
+## I. Alacritty
+
+### I-1.tmux
+
+**TMUX-SESSIONS**
+
+New session:
+
+tmux
+
+List session:
+
+tmux list, Ctrl + b s
+
+**TMUX-PANES**
+
+Horizontal split:
+
+Ctrl + b %
+
+Vertical split:
+
+Ctrl + b “
+
+Swap panes:
+
+Ctrl + b o
+
+Kill pane:
+
+Ctrl + b x
+
+**TMUX-WINDOWS**
+
+Create window:
+
+Ctrl + b c
+
+Close window:
+
+Ctrl + b &
+
+Move windows:
+
+Ctrl + b p, Ctrl + b n
+
+### I-2. Vi Mode
+
+Ctrl + Shift + Spacebar
+
+<a name="linux"></a>
+
+## II. Linux/Unix commands
+
+Move cursor to beginning of line:
+
+Ctrl-a
+
+Move cursor to end of line:
+
+Ctrl-e
+
+Move cursor back one word:
+
+Ctrl-b 
+
+Move cursor forward one word:
+
+Ctrl-f
+
+Cut the last word:
+
+Ctrl-w
+
+Cut everything after the cursor:
+
+Ctrl-k
+
+Cut everything before the cursor:
+
+Ctrl-u
+
+Paste the last thing to be cut:
+
+Ctrl-y
+
+Undo:
+
+Ctrl-_
+
+The Up Arrow and Down Arrow keys go back in the command history
+
+See:
+
+[Master Mac/Linux Terminal Shortcuts Like a Ninja](https://betterprogramming.pub/master-mac-linux-terminal-shortcuts-like-a-ninja-7a36f32752a6)
+
+[Bash Scripting Tutorial for Beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
+
+<a name="fish"></a>
+
+## III. Fish
+
+Searchable command history
+history:
+
+Alt + ↑ and Alt + ↓
+
+See: 
+
+[Tutorial](https://fishshell.com/docs/current/language.html#envvar-history)
+
+<a name="vim"></a>
+
+## IV. Vim key bindings
+
+### IV-1. Editing and Navigating
+
+See:
+
+[Navigating Basics in Vim](https://docs.google.com/presentation/d/1IRXU1MIjZRFnglbI0S0b_-m-rW7IjdTUDp2_70Sy5q8/edit?usp=sharing)
+
+Open a file in the terminal:
+
+nvim file_name
+
+Open a file in Neovm:
+
+:e file_name
+
+Remove the number setting:
+
+:setlocal nonumber norelativenumber
+
+Replace one character:
+
+r
+
+Delete character(s) and insert:
+
+s
+
+Set absolute line number:
+
+:set nu
+
+Set relative line number:
+
+:set rnu
+
+Go to line 10:
+
+:10
+
+Start writing at the end of line:
+
+Shift-a
+
+Delete everything from the cursor onwards and start writing:
+
+Shift-c
+
+Delete everything from the cursor onwards or afterwards:
+
+d$
+
+d0
+
+Jump to the second occurrence of the letter ‘i’ from the cursor position:
+
+f + i + ;
+
+Undo:
+
+u
+
+Redo:
+
+Ctrl + r
+
+Move down in a long line:
+
+gi
+
+Move up in a long line:
+
+gk
+
+Find and replace a with b:
+
+:%s/a/b/gci
+
+notes:
+
+To search and replace the pattern in the entire file, use the percentage character.
+
+To replace all occurrences of the search pattern in the current line, add the g flag.
+
+To substitute text, but want a confirmation every time you do it, you can use the c in the substitute command.
+
+To ignore case for the search pattern, use the i flag.
+
+Paste from system clipboard:
+
+"p or "+p or "*p
+
+Paste to system clipboard:
+
+"*y or "+y
+
+Moving to another window:
+
+Ctrl + w + w
+
+Enter normal mode:
+
+Esc
+
+Save the file:
+
+:w
+
+Close the window:
+
+:q
+
+Close all the buffers:
+
+:qa!
+
+Open the terminal:
+
+:term
+
+Quit the terminal:
+
+<CTRL + \><CTRL + n>
+
+Enable spell check:
+
+:set spell
+
+Correct spell errors:
+
+[s or ]s
+
+Select a word:
+
+viw (on the word)
+
+Select a rectangular range:
+
+Cntl + v
+
+Insert date and time on Unix-based systems:
+
+:r !date
+
+### IV-2. Buffers
+
+Show all the buffers:
+
+:ls 
+
+Open a file in the list of buffers (you can use Tab key):
+
+:buffer filename 
+
+Open a file in a new buffer:
+
+:edit filename
+
+Open a buffer:
+
+:bufferN (N is buffer number)
+
+Go to next buffer:
+
+:bnext
+
+Go back to the previous buffer
+
+:bprev
+
+### IV-3. Tabs
+
+Show all the tabs:
+
+:tabs
+
+Open file.txt in a new tab:
+
+:tabnew file.txt
+
+Close current tab:
+
+:tabclose
+
+Go to next tab:
+
+:tabnext 
+
+Go to previous tab:
+
+:tabprev
+
+### IV-4. Windows
+
+Split window horizontally:
+
+:split
+
+:split filename
+
+Split window vertically:
+
+:vsplit
+
+:vsplit filename
+
+Create new window:
+
+:new filename
+
+Close a window:
+
+<Ctrl-w> + c
+
+Move the cursor to left/bottom/top/right:
+
+<Ctrl-w> + h/j/k/l
+
+Move the cursor to another window:
+
+<Ctrl-w> + w
+
+Focus on Top/Middle/Bottom:
+
+zt/zz/zb
+
+Copy and save the content to a register:
+
+"ay
+
+Paste the content:
+
+"p
+
+Display the content of the registers:
+
+:reg
+
+### IV-4. Macros
+
+1. Start recording on a dedicated key using **q**
+
+2. Execute commands you want to reproduce (move, replace, append, …)
+
+3. Stop recording using **q**
+
+4. Replay as needed using **@**
+
+See:
+
+[5 illustrated uses of VIM for DevOps](https://medium.com/codeshake/5-illustrated-uses-of-vim-for-devops-e734e6e56c44)
+
+### IV-5.Verb Modifier Object
+
+You can talk to Vim or Neovim in Verb Modifier Object sentences. Here are some of verbs, modifiers and objects.
+
+Verbs:
+
+v (visual), c (change), d (delete), y (yank/copy)
+
+Modifiers:
+
+i (inside), a (around), t (till..finds a character), f (find..like till except including the char), / (search..find a string/regex)
+
+Objects:
+
+w (word), s (sentence), p (paragraph), b (block/parentheses), t (tag, works for html/xml)
+
+See:
+
+[Learn to speak vim — verbs, nouns, and modifiers!](https://yanpritzker.com/learn-to-speak-vim-verbs-nouns-and-modifiers-d7bfed1f6b2d)
+
+[Tips You Wish You Knew While Learning Vim](https://levelup.gitconnected.com/vim-essentials-for-beginners-ultimate-vim-guide-68e7d3725de9)
+
+### Speaking to Vim or Neovim in sentences
+
+delete the current word:
+
+diw
+
+delete the current word and enter insert mode after:
+
+ciw
+
+change current sentence:
+
+cis
+
+change a string inside quotes:
+
+ci"
+
+change until next occurrence of 'foo':
+
+c/foo
+
+change everything from here to the letter X:
+
+ctX
+
+visually select this paragraph
+
+vap
+
+### Add " " to multiple words
+
+Let’s add " " to multiple words using the small delete register **(CTRL+r)** and **.**
+
+a: yiwciw"" ESC P
+
+b: ciw"`CTRL+r`-", and ESCw.
+
+### See:
+
+[Tips You Wish You Knew While Learning Vim](https://levelup.gitconnected.com/vim-essentials-for-beginners-ultimate-vim-guide-68e7d3725de9)
+
+<a name="neovim"></a>
+
+## V. Neovim
+
+### V-1. nvim-tree.lua
+
+Open Nvim Tree Toggle:
+
+:NvmTreeToggle or , + n
+
+Rename or Move:
+
+r
+
+Copy the name:
+
+y
+
+Copy the relative path:
+
+Y
+
+Copy the absolute path:
+
+gy
+
+Delete the file:
+
+d
+
+Open the file with default system application:
+
+s
+
+Open the file in a vertical split:
+
+<Ctrl + v>
+
+Open the file in a horizontal split:
+
+<Ctrl + x>
+
+Open the file in a new tab:
+
+<Ctrl + t>
+
+Open the file as a preview (keeping the cursor in the tree):
+
+<Tab>
+
+Refresh the tree:
+
+R
+
+Toggle the help to see all the commands:
+
+g?
+
+### V-2. Telescope.nvim
+
+Find files:
+
+:Telescope find_files (, + ff in my key mapping)
+
+Grep search:
+
+:Telescope live_grep (, +fg in my key mapping)
+
+<C-n>/<Down>	Next item
+
+<C-p>/<Up>	Previous item
+
+j/k	Next/previous (in normal mode):tabnextNext/previous (in normal mode)
+
+H/M/L	Select High/Middle/Low (in normal mode)
+
+gg/G	Select the first/last item (in normal mode)
+
+<CR>	Confirm selection
+
+<C-x>	Go to file selection as a split
+
+<C-v>	Go to file selection as a vsplit
+
+<C-t>	Go to a file in a new tab
+
+<C-u>	Scroll up in preview window
+
+<C-d>	Scroll down in preview window
+
+<C-/>	Show mappings for picker actions (insert mode)
+?	Show mappings for picker actions (normal mode)
+
+<C-c>	Close telescope
+
+<Esc>	Close telescope (in normal mode)
+
+<Tab>	Toggle selection and move to next selection
+
+<S-Tab>	Toggle selection and move to prev selection
+
+<C-q>	Send all items not filtered to quickfixlist (qflist)
+<M-q>	Send all selected items to qflist
+
+You can see the key mappings here:
+
+[](https://github.com/nvim-telescope/telescope.nvim)
+
+<a name="ranger"></a>
+
+## VI. Ranger
+
+Open Ranger with the following command in the terminal when Ranger often freeze:
+
+ranger –clean
+
+Shows or hides the floating window:
+
+:RnvimrToggle (in Neovim)
+
+Delete multiple files:
+
+Select files with Space bar or V
+
+d + D + Enter + y
+
+Delete files with trash-cli using Shell:
+
+:shell trash-put file_name1 file_name2
+
+Go to the top of the list:
+
+gg
+
+Preview file:
+
+i
+
+Open file:
+
+r
+
+View hidden files:
+
+zh
+
+Rename current file:
+
+cw
+
+Copy file:
+
+yy
+
+Cut file:
+
+dd
+
+Undo:
+
+u
+
+Change settings:
+
+z
+
+Delete file:
+
+dD
+
+Move a file:
+
+dd (cut)
+
+pp (paste)
+
+Move a file using Shell:
+
+:shell -f mv %f /foo/bar
+
+Move multiple files using Shell:
+
+Select multiple files with Space bar
+
+:shell mv %s /foo/bar
+
+See:
+
+[Ranger on Linux – A Complete Terminal File Manager For Linux](https://www.linuxfordevices.com/tutorials/linux/ranger-file-manager)
+
+<a name="rstudio"></a>
+
+## VII. RStudio
+
+Comment / Uncomment codes:
+
+Ctrl + Shift + C
+
+Add the Pipe **|>**
+
+Ctrl + Shift + M
+
+Insert The Assignment Operator **<-**
+
+Alt + –
+
+Select a Rectangular Block:
+
+ALT – click & drag
+
+Show a keyboard shortcut cheat Sheet:
+
+Alt + Shift + K
+
+<a name="brave"></a>
+
+## VIII. Brave browser + Vimium for keyboard-based navigation
+
+### VIII-1. Brave browser
+
+[What keyboard shortcuts can I use in Brave?](https://support.brave.com/hc/en-us/articles/360032272171-What-keyboard-shortcuts-can-I-use-in-Brave-)
+
+[How back from url address bar to site?](https://github.com/philc/vimium/issues/840)
+
+### VIII-2. Vimium
+
+[Vimium - The Hacker's Browser](https://github.com/philc/vimium#readme)
