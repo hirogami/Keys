@@ -1,0 +1,34 @@
+---
+title: "Pyenv_Pipenv"
+author: "misho"
+date: "2023-10-15"
+output: html_document
+---
+
+## Install Python using pyenv
+
+1. List installed versions
+
+pyenv versions
+
+2. List available versions
+
+pyenv install -l
+
+3. Install
+
+pyenv install python 3.11
+
+## Creat a virtual environment using pipenv
+
+1. Create a vertual environment
+
+pipenv --python 3.11
+
+2. Activate the cirtual environment
+
+pipenv shell
+
+4. Install a library
+
+pienv install pandas
