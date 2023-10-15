@@ -1,0 +1,54 @@
+---
+title: "Mounting"
+author: "misho"
+date: "2023-10-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Mounting
+
+# List the blocks
+
+lsblk
+
+# Mount an external disk
+
+udisksctl mount -b /dev/sdb1
+
+# Access the directory
+
+sudo sh -c 'cd/dev/sda2
+or
+sudo -s
+
+sdb1
+
+cd/run/media/misho/HD-ADU3
+
+## unmount
+
+udisksctl unmount -b /dev/sdb1
+
+## when busy
+
+sudo lsof/dev/sdb1
+
+kill 261123
+
+## Mount USB
+
+1. lsblk -f
+
+2. sudo fdisk -l
+
+Look for your USB drive in the list. It should be something like /dev/sdX (e.g., /dev/sdb, /dev/sdc, etc.).
+
+3. mkdir ~/usb_mount
+
+4. sudo mount /dev/sdb1 ~/usb_mount
+
+5. sudo unmount ~/usb_mount
